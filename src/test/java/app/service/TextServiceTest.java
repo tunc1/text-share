@@ -46,4 +46,10 @@ class TextServiceTest
         Mockito.when(textRepository.findByIdAndExpireDateGreaterThan(Mockito.any(),Mockito.any())).thenReturn(Optional.empty());
         Assertions.assertThrows(EntityNotFoundException.class,()->textService.findById(Long.valueOf("1")));
     }
+    @Test
+    void delete()
+    {
+        textService.delete();
+        Mockito.verify(textRepository).deleteByExpireDateLessThan(Mockito.any());
+    }
 }

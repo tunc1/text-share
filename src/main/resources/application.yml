@@ -12,3 +12,5 @@ spring:
 springdoc:
   swagger-ui:
     path: /swagger-ui.html
+scheduling:
+  milliseconds: 120000
