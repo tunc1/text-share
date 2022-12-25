@@ -11,6 +11,7 @@ public class Text
     @SequenceGenerator(name="TEXT_SEQUENCE_GENERATOR",sequenceName="TEXT_SEQUENCE",allocationSize=1)
     @GeneratedValue(strategy=GenerationType.SEQUENCE,generator="TEXT_SEQUENCE_GENERATOR")
     private Long id;
+    @Column(length=1000)
     private String text;
     private LocalDateTime expireDate;
     public Long getId()
