@@ -19,6 +19,7 @@ public class TextController
 	@ResponseStatus(code=HttpStatus.CREATED)
 	public Text save(@RequestBody Text text)
 	{
+		text.setId(0L);
 		return textService.save(text);
 	}
 	@GetMapping("/{id}")
