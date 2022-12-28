@@ -13,6 +13,6 @@ class RestExceptionHandlerTest
     {
         RestExceptionHandler restExceptionHandler=new RestExceptionHandler();
         ExceptionResponse exceptionResponse=restExceptionHandler.handleEntityNotFoundException();
-        assertEquals("No Record Found",exceptionResponse.message());
+        assertEquals("No Record Found",exceptionResponse.error());
     }
 }
